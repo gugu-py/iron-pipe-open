@@ -1,0 +1,3 @@
+coscmd
+fastapi
+uvicorn

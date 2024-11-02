@@ -1,0 +1,1 @@
+In `/src/app.js`, replace `ws://your_api_url:8000/ws` with your own.

@@ -1,0 +1,126 @@
+/* styles.css */
+
+body {
+    background-color: #121212; /* Dark background for the whole app */
+    color: #fff; /* Default text color */
+    margin: 0; /* Remove default margin */
+    font-family: Arial, sans-serif; /* Use a clean font */
+  }
+  
+  .chat-container {
+    width: 300px;
+    max-height: 100vh;
+    overflow-y: auto;
+    border-left: 1px solid #444;
+    background-color: #222;
+    padding: 10px;
+}
+
+.chat-header {
+    text-align: center;
+    color: #fff;
+}
+
+.chat-message {
+    margin-bottom: 10px;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.input-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    right: 340px; /* Adjust according to chat width */
+    display: flex;
+    justify-content: center;
+  }
+  
+  .input-field {
+    width: 70%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid #444;
+    background-color: #444;
+    color: #fff;
+}
+
+.send-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    border: 1px solid #444;
+    background-color: #00aaff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.send-button.disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+.connecting-message {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+.meme-popup {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 40px;
+    border-radius: 20px;
+    font-size: 48px;
+}
+
+.drop-animation {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 200px;
+}
+
+
+
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .chat-container {
+        max-width: 100%; /* Full width on smaller screens */
+    }
+
+    .input-container {
+        bottom: 5px; /* Adjusted for mobile */
+        left: 5px; /* Adjusted for mobile */
+        right: 5px; /* Adjusted for mobile */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: stretch; /* Stretch input and button */
+    }
+
+    .input-field {
+        width: 100%; /* Full width on mobile */
+        margin-bottom: 5px; /* Spacing between input and button */
+    }
+
+    .send-button {
+        width: 100%; /* Full width on mobile */
+    }
+
+    .meme-popup {
+        padding: 20px; /* Reduced padding on mobile */
+        font-size: 36px; /* Smaller font size on mobile */
+    }
+}
